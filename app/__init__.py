@@ -8,12 +8,15 @@ from flask import Flask
 from config import Config  # 从config模块导入config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
 db = SQLAlchemy(app)  # 数据库对象
 migrate = Migrate(app, db)  # 迁移引擎对象
+login = LoginManager(app)  # 登录设置
+login.login_view = 'login'
 
 # 从app包中导入routes
 from app import routes, models
