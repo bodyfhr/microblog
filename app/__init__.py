@@ -5,8 +5,10 @@
 # @Software: PyCharm
 
 from flask import Flask
+from config import Config  # 从config模块导入config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 # 从app包中导入routes
 from app import routes

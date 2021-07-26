@@ -3,10 +3,13 @@
 # @Author  : 费海瑞
 # @File    : routes.py
 # @Software: PyCharm
-from flask import render_template
+from flask import render_template, flash, redirect, url_for
 
 from app import app
+from app.forms import LoginForm
 
+
+# 主页路由
 @app.route('/')
 @app.route('/index')
 def index():
@@ -23,3 +26,15 @@ def index():
       }
    ]
    return render_template("index.html",title='home',user=user,posts=posts)
+
+
+# 登录路由
+@app.route('/loginxxx', methods=['GET', 'POST'])
+def login():
+   login_form = LoginForm()  # 表单实例化对象
+   if login_form.validate_on_submit():
+      msg = 'Login requested for user {},remember_me={}'.format(login_form.username.data, login_form.remember_me.data)
+      flash(msg)
+      print(msg)
+      return redirect(url_for('index'))
+   return render_template('login.html', title='Sign In', form=login_form)
