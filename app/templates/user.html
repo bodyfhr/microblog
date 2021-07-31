@@ -14,14 +14,20 @@
                     <p>Last seen on:{{ user.last_seen }}</p>
                 {% endif %}
 
+                <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
                 {% if user == current_user %}
                     <P>
                         <a href="{{ url_for('edit_profile') }}">Edit your profile</a>
                     </P>
+                {% elif not current_user.is_following(user) %}
+                    <p><a href="{{ url_for('follow',username=user.username) }}">Follow</a></p>
+                {% else %}
+                    <p><a href="{{ url_for('unfollow',username=user.username) }}">Unfollow</a></p>
                 {% endif %}
             </td>
         </tr>
     </table>
+
     <hr>
     {% for post in posts %}
         {% include '_post.html' %}
