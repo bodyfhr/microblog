@@ -11,6 +11,7 @@ from config import Config  # 从config模块导入config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -21,6 +22,7 @@ login = LoginManager(app)  # 登录设置
 login.login_view = 'login'
 
 mail = Mail(app)
+bootstrap = Bootstrap(app)
 
 # 从app包中导入routes
 from app import routes, models
