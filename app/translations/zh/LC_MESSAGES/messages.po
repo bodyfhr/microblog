@@ -1,0 +1,147 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-07-31 17:31+0800\n"
+"PO-Revision-Date: 2021-07-31 17:33+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app/__init__.py:27
+msgid "Please log in to access this page."
+msgstr "请登录进入本页."
+
+#: app/email.py:32
+msgid "[Microblog] Reset Your Password"
+msgstr "博客重置密码"
+
+#: app/forms.py:16 app/forms.py:24 app/forms.py:57
+msgid "Username"
+msgstr "用户名"
+
+#: app/forms.py:17 app/forms.py:26 app/forms.py:50
+msgid "Password"
+msgstr "密码"
+
+#: app/forms.py:18
+msgid "Remember Me"
+msgstr "记住我"
+
+#: app/forms.py:19
+msgid "Sign In"
+msgstr "登录"
+
+#: app/forms.py:25 app/forms.py:44
+msgid "Email"
+msgstr "邮箱"
+
+#: app/forms.py:28 app/forms.py:51
+msgid "Repeat Password"
+msgstr "确认密码"
+
+#: app/forms.py:28
+msgid "password"
+msgstr "密码"
+
+#: app/forms.py:29
+msgid "Register"
+msgstr "注册"
+
+#: app/forms.py:34
+msgid "Please use a different username."
+msgstr "请使用不同的用户名."
+
+#: app/forms.py:39
+msgid "Please use a different email address."
+msgstr "请使用不同的电子邮件地址."
+
+#: app/forms.py:45 app/forms.py:52
+msgid "Request Password Reset"
+msgstr "请求密码重置"
+
+#: app/forms.py:58
+msgid "About_me"
+msgstr "关于我"
+
+#: app/forms.py:59 app/forms.py:65
+msgid "Submit"
+msgstr "提交"
+
+#: app/forms.py:64
+msgid "Say something"
+msgstr ""
+
+#: app/routes.py:30
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/routes.py:60
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/routes.py:93
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: app/routes.py:108
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+
+#: app/routes.py:125
+msgid "Your password has been reset."
+msgstr ""
+
+#: app/routes.py:160
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/routes.py:174 app/routes.py:191
+#, python-format
+msgid "User %(username)s not found."
+msgstr ""
+
+#: app/routes.py:177
+msgid "You cannot follow yourself!"
+msgstr ""
+
+#: app/routes.py:181 app/routes.py:198
+msgid "You are following %{username}!"
+msgstr ""
+
+#: app/routes.py:194
+msgid "You cannot unfollow yourself!"
+msgstr ""
+
+#: app/templates/404.html:4 app/templates/505.html:4
+msgid "File Not Found"
+msgstr ""
+
+#: app/templates/505.html:5
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/505.html:6
+msgid "The administrator has been notified.Sorry for the inconvenience！"
+msgstr ""
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app/templates/index.html:5
+#, python-format
+msgid "Hello, %(username)s!"
+msgstr ""
+

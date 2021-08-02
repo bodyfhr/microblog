@@ -19,7 +19,8 @@ class Config:
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://%s:%s@%s/%s" % ('root', 'root', '127.0.0.1', 'flask_blog')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    POSTS_PER_PAGE = 25
+    # 每页显示帖子的个数
+    POSTS_PER_PAGE = 8
 
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
@@ -28,6 +29,5 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')  # 客户端授权密码
 
-    # # 每页显示帖子的个数
-    # ADMINS = ['your-email@example.com']
-    # POSTS_PER_PAGE =3
+    # 支持的语言列表
+    LANGUAGES = ['en', 'zh']  # 注意：不要填写zh_CN。有坑！
