@@ -4,7 +4,7 @@
 # @File    : routes.py
 # @Software: PyCharm
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, g
 from werkzeug.urls import url_parse
 from app import app
 from app.forms import LoginForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm
@@ -14,7 +14,10 @@ from app.forms import RegistrationForm
 from app import db
 from app.forms import EditProfileForm
 from app.email import send_password_reset_email
-from flask_babel import _
+from flask_babel import _, get_locale
+from guess_language import guess_language
+from flask import jsonify
+from app.translate import translate
 
 
 # 主页路由
@@ -24,7 +27,10 @@ from flask_babel import _
 def index():
    form = PostForm()
    if form.validate_on_submit():
-      post = Post(body=form.post.data, author=current_user)
+      language = guess_language(form.post.data)
+      if language == 'UNKNOWN' or len(language) > 5:
+         language = ''
+      post = Post(body=form.post.data, author=current_user, language=language)
       db.session.add(post)
       db.session.commit()
       flash(_('Your post is now live!'))
@@ -145,6 +151,7 @@ def before_request():
    if current_user.is_authenticated:
       current_user.last_seen = datetime.utcnow()
       db.session.commit()
+   g.locale = 'zh' if str(get_locale()).startswith('zh') else str(get_locale())
 
 
 # 个人资料编辑路由
@@ -197,3 +204,11 @@ def unfollow(username):
    db.session.commit()
    flash(_('You are following %{username}!', username=username))
    return redirect(url_for('user', username=username))
+
+
+# 翻译页面中英文的路由
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+   return jsonify(
+      {'text': translate(request.form['text'], request.form['source_language'], request.form['dest_language'])})

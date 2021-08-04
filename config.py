@@ -31,3 +31,7 @@ class Config:
 
     # 支持的语言列表
     LANGUAGES = ['en', 'zh']  # 注意：不要填写zh_CN。有坑！
+
+    # 调用百度翻译
+    APPID = os.environ.get('APPID')
+    BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
