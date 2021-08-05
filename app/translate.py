@@ -6,17 +6,16 @@
 
 import json, random, hashlib, http.client
 from flask_babel import _
-from app import app
 from urllib import parse
-
+from flask import current_app
 
 def translate(q, fromLang, toLang):
-    if 'APPID' not in app.config or not app.config['APPID']:
+    if 'APPID' not in current_app.config or not current_app.config['APPID']:
         return _('Error:the translation service is not configured.')
-    if 'BD_TRANSLATOR_KEY' not in app.config or not app.config['BD_TRANSLATOR_KEY']:
+    if 'BD_TRANSLATOR_KEY' not in current_app.config or not current_app.config['BD_TRANSLATOR_KEY']:
         return _('Error:the translation service is not configured.')
-    appid = app.config['APPID']
-    secretKey = app.config['BD_TRANSLATOR_KEY']
+    appid = current_app.config['APPID']
+    secretKey = current_app.config['BD_TRANSLATOR_KEY']
 
     httpClient = None
     myurl = '/api/trans/vip/translate'

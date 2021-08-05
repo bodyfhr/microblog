@@ -1,0 +1,102 @@
+2021-08-04 18:53:32,512 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 18:53:34,304 ERROR: Exception on / [GET] [in C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\python\PyCharmWork\microblog\app\main\routes.py", line 39, in index
+    next_url = url_for('index', page=posts.next_num) if posts.has_next else None
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\werkzeug\routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index' with values ['page']. Did you mean 'main.index' instead?
+2021-08-04 18:57:11,973 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:05:20,160 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:06:54,501 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:06:57,254 ERROR: Exception on /auth/register [GET] [in C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:\python\PyCharmWork\microblog\app\auth\routes.py", line 66, in register
+    return render_template('register.html', title='Register', form=form)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\jinja2\loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: register.html
+2021-08-04 19:07:11,160 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:10:05,338 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:13:15,516 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:21:57,476 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:25:10,491 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:27:01,221 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:27:32,305 ERROR: Exception on / [POST] [in C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\python\PyCharmWork\microblog\app\main\routes.py", line 35, in index
+    return redirect(url_for('index'))
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\werkzeug\routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2021-08-04 19:28:45,393 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
+2021-08-04 19:29:39,969 ERROR: Exception on /edit_profile [POST] [in C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\python\PyCharmWork\microblog\app\main\routes.py", line 88, in edit_profile
+    return redirect(url_for('edit_profile'))
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Administrator\.virtualenvs\microblog\lib\site-packages\werkzeug\routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2021-08-04 19:30:21,620 INFO: Microblog startup [in E:\python\PyCharmWork\microblog\app\__init__.py:64]
