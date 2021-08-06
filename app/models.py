@@ -4,7 +4,6 @@
 # @File    : models.py
 # @Software: PyCharm
 from datetime import datetime
-
 import jwt
 from time import time
 from werkzeug.security import generate_password_hash, check_password_hash
